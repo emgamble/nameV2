@@ -37,6 +37,7 @@ public class Main {
         */
 
         String output[];
+        school schools [] = new school [text.length];
         for (int i = 1; i < countOfLines; i++) {
             output = text[i].split("\t");
             int num1 = 0, num2, num3;
@@ -45,21 +46,22 @@ public class Main {
                 num2 = Integer.parseInt(output[19]);
                 num3 = Integer.parseInt(output[20]);
                 double average = (double)(num1 + num2 + num3) / 3.0;
-                System.out.println(output[1]+ ": "+average);
+                schools [i] = new school(output[1], average);
+                System.out.println(output[1]+ ": " + average);
+
             }
+
 
         }
 
 
-//       /* String schoolName[] = new String[1000];
-//        for(int i = 3; i < text.length; i++) {
-//            output = text[i].split("\t");
-//
-//        }
-//        String name = output[1];*/
-        //System.out.println(name);
 
-        //not the output length but the tab
+
+
+
+
+
+//
     }
 }
 
